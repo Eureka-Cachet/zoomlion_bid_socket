@@ -4,7 +4,7 @@ MAINTAINER              eurekacachetdev@gmail.com
 
 ENV                     NODE_ENV=production
 
-COPY                    socket /var/www/socket
+COPY                    . /var/www/socket
 
 RUN                     npm install supervisor -g
 
