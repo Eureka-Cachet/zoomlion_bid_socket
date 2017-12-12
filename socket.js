@@ -50,7 +50,7 @@ enrolment.on('connection', function(socket){
         console.log("il", data.index_left);
         console.log("f", data.form);
         console.log("p", data.portrait);
-        socket.broadcast.emit(payload.channel, stringify);
+        socket.broadcast.emit(payload.channel, data);
         console.log('**************************************');
     });
 
