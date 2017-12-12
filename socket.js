@@ -42,8 +42,14 @@ enrolment.on('connection', function(socket){
     socket.on('enrolment', function(payload){
         console.log('***********from enrolment*************');
         console.log(payload.channel);
-        let stringify = JSON.stringify(payload.data);
-        console.log(stringify);
+        let data = payload.data;
+        let stringify = JSON.stringify(data);
+        console.log("tl", data.thumb_left);
+        console.log("tr", data.thumb_right);
+        console.log("ir", data.index_right);
+        console.log("il", data.index_left);
+        console.log("f", data.form);
+        console.log("p", data.portrait);
         socket.broadcast.emit(payload.channel, stringify);
         console.log('**************************************');
     });
